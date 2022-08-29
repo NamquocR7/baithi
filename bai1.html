@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findMax3(arr)
+    {
+        for(let i=0; i<arr.length;i++) {
+            for(let j=i+1; j<arr.length; j++) {
+                let max;
+                if(arr[j] > arr[i]) {
+                    max = arr[j];
+                    arr[j] = arr[i];
+                    arr[i] = max;
+                }
+            }
+        }
+        return arr[2]
+    }
+    alert(findMax3([1,4,6,8,4]))
+</script>
+
+</body>
+</html>
